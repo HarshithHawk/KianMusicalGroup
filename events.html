@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+	<title>Kian Musical Group</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body bgcolor="#f0f0f0">
+<div style="width: 100%;margin-top: 5px">
+    <div style="margin-left: 85%;padding: 5px;">
+        <a href="https://www.youtube.com/channel/UC7iq-qlezgMJEbFzy15eZ_Q/videos"><img width="75px" height="20px" src="img/youtube.png"></a>
+        <a href="https://www.facebook.com/k001par"><img style="margin-left: 5px" src="img/fb.png" width="25px" height="25px"></a>
+        <a href="https://twitter.com/kdparikh782"><img src="img/twitter.png" width="25px" height="25px"></a>
+        <a href="https://www.instagram.com/dreamchager18/"><img src="img/insta.png" width="25px" height="25px"></a>     
+    </div>
+</div>
+<div class="topnav">
+    <a class="link" href="home.html"><h3>Home</h3></a>
+    <a class="link" href="blog.html"><h3>Blog</h3></a>
+    <a style="background-color: #ddd;font-family: helvetica;color: black;" href="events.html"><h3>Events</h3></a>
+    <a class="link" href="about.html"><h3>About</h3></a>
+</div>
+
+<div class="slideshow-container">
+<div class="mySlides fade">
+  <div class="numbertext">1 / 14</div>
+  <img src="img/img01.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 14</div>
+  <img src="img/img02.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 14</div>
+  <img src="img/img03.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 14</div>
+  <img src="img/img04.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 / 14</div>
+  <img src="img/img05.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">6 / 14</div>
+  <img src="img/img06.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">7 / 14</div>
+  <img src="img/img07.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">8 / 14</div>
+  <img src="img/img13.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">9 / 14</div>
+  <img src="img/img14.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">10 / 14</div>
+  <img src="img/img15.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">11 / 14</div>
+  <img src="img/img16.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">12 / 14</div>
+  <img src="img/img17.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">13 / 14</div>
+  <img src="img/img18.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">14 / 14</div>
+  <img src="img/img19.png" style="width:100%">
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span>
+  <span class="dot" onclick="currentSlide(9)"></span>
+  <span class="dot" onclick="currentSlide(10)"></span>
+  <span class="dot" onclick="currentSlide(11)"></span>
+  <span class="dot" onclick="currentSlide(12)"></span>
+  <span class="dot" onclick="currentSlide(13)"></span> 
+  <span class="dot" onclick="currentSlide(14)"></span>
+</div>
+<center><div id="player" style="margin: 10% 0%"></div></center>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '520',
+          width: '853',
+          videoId: 'I_ugvMEnoWw',
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.
+      var done = false;
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+          setTimeout(stopVideo, 6000);
+          done = true;
+        }
+      }
+      function stopVideo() {
+        player.stopVideo();
+      }
+</script>
+<div>    
+    <div style="width: 100%;color: white;border-width: 2px;border-style: solid;padding: 2% 32.5%;background-color: #3e4444;float: left;text-align: center;">
+        Contact us<br>
+        <ul>
+            <li>Mobile No.: +91-99242 10527</li><br>
+            <li>E-mail : kantiparikh7@gmail.com</li><br>
+        </ul>
+        Follow us on :<br>
+        <a href="https://www.youtube.com/channel/UC7iq-qlezgMJEbFzy15eZ_Q/videos">
+            <img width="30px" height="22px" src="img/ut.png">
+        </a>
+        <a href="https://www.facebook.com/k001par">
+            <img src="img/fb.png" width="25px" height="25px">
+        </a>
+        <a href="https://twitter.com/kdparikh782">
+            <img src="img/twitter.png" width="25px" height="25px">
+        </a>
+        <a href="https://www.instagram.com/dreamchager18/">
+            <img src="img/insta.png" width="25px" height="25px">
+        </a>
+    </div>
+</div>
+</body>
+</html>
